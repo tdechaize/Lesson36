@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<results version="2">
+    <cppcheck version="2.7" />
+    <errors>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;alphainc&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;alphainc&apos;. The initialized value is overwritten before it is read." cwe="563" file0="Lesson36.c">
+            <location file="Lesson36.c" line="377" column="11" info="alphainc is overwritten" />
+            <location file="Lesson36.c" line="361" column="17" info="alphainc is initialized" />
+            <symbol>alphainc</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;angle&apos; shadows outer variable" verbose="Local variable &apos;angle&apos; shadows outer variable" cwe="398" file0="Lesson36.c">
+            <location file="Lesson36.c" line="437" column="10" info="Shadow variable" />
+            <location file="Lesson36.c" line="127" column="8" info="Shadowed declaration" />
+            <symbol>angle</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;angle&apos; is assigned a value that is never used." verbose="Variable &apos;angle&apos; is assigned a value that is never used." cwe="563" file0="Lesson36.c">
+            <location file="Lesson36.c" line="437" column="17" />
+            <symbol>angle</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config." />
+    </errors>
+</results>
